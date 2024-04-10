@@ -55,6 +55,5 @@ prisma/*
 !.yarn/plugins
 .pnp.*
 
-
-
-
+# storybook
+*storybook.log
