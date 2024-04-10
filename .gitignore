@@ -47,18 +47,13 @@ prisma/*
 #!.yarn/patches
 #!.yarn/plugins
 #!.yarn/releases
-#!.yarn/sdks
 #!.yarn/versions
 
 # yarn berry - not use zero install
-.pnp.*
 .yarn/*
-!.yarn/cache
-!.yarn/patches
-!.yarn/plugins
 !.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+!.yarn/plugins
+.pnp.*
 
 
 
