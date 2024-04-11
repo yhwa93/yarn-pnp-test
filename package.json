@@ -17,6 +17,7 @@
     "next-intl": "^3.10.0",
     "react": "^18",
     "react-dom": "^18",
+    "storybook-i18n": "2.0.13",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
@@ -25,9 +26,12 @@
     "@storybook/addon-links": "7.6.17",
     "@storybook/addon-onboarding": "^1.0.11",
     "@storybook/blocks": "7.6.17",
+    "@storybook/manager-api": "^8.0.7",
     "@storybook/nextjs": "7.6.17",
+    "@storybook/preview-api": "^8.0.7",
     "@storybook/react": "7.6.17",
     "@storybook/test": "7.6.17",
+    "@storybook/types": "^8.0.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
