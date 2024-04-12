@@ -51,8 +51,11 @@ prisma/*
 
 # yarn berry - not use zero install
 .yarn/*
+!.yarn/patches
 !.yarn/releases
 !.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
 .pnp.*
 
 # storybook
