@@ -1,6 +1,8 @@
 import type { Preview } from '@storybook/react'
-import { NextIntlClientProvider, useMessages } from 'next-intl'
-import { useGlobals } from '@storybook/manager-api'
+import { NextIntlClientProvider } from 'next-intl'
+import * as koMsg from '../messages/ko.json'
+import * as enMsg from '../messages/en.json'
+import * as jaMsg from '../messages/ja.json'
 
 const preview: Preview = {
   globalTypes: {
@@ -12,14 +14,31 @@ const preview: Preview = {
         items: [
           { value: 'ko', right: '🇰🇷', title: '한국어' },
           { value: 'en', right: '🇺🇸', title: 'English' },
-          { value: 'ja', right: '🇯🇵', title: '中文' },
+          { value: 'ja', right: '🇯🇵', title: '日本語' },
         ],
       },
     },
   },
   decorators: [
     (Story, context) => {
-      return <Story />
+      const selectedLocale = context.globals.locale
+
+      const convertLocaleMsg = () => {
+        switch (selectedLocale) {
+          case 'ko':
+            return koMsg
+          case 'en':
+            return enMsg
+          case 'ja':
+            return jaMsg
+        }
+      }
+
+      return (
+        <NextIntlClientProvider locale={selectedLocale} messages={convertLocaleMsg()}>
+          <Story />
+        </NextIntlClientProvider>
+      )
     },
   ],
   parameters: {
