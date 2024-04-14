@@ -14,40 +14,47 @@ const meta = {
   },
 } satisfies Meta<typeof Button>
 
+export default meta
+type Story = StoryObj<typeof meta>
+
 export const StoryWithLocale = {
-  render: (args: any, { globals: { locale } }: { globals: { locale: string } }) => {
+  render: () => {
     const t = useTranslations('About')
 
     return <Button label={t('title')} primary={true} />
   },
 }
 
-export default meta
-type Story = StoryObj<typeof meta>
-
-export const Primary: Story = {
-  args: {
-    primary: true,
-    label: 'Button',
-  },
-}
-
-export const Secondary: Story = {
-  args: {
-    label: 'Button',
-  },
-}
-
-export const Large: Story = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
-}
-
-export const Small: Story = {
-  args: {
-    size: 'small',
-    label: 'Button',
-  },
-}
+// export const Primary: Story = {
+//   decorators: [
+//     (Story) => (
+//       <div className="i_am_decorator">
+//         <Story />
+//       </div>
+//     ),
+//   ],
+//   args: {
+//     primary: true,
+//     label: 'Button',
+//   },
+// }
+//
+// export const Secondary: Story = {
+//   args: {
+//     label: 'Button',
+//   },
+// }
+//
+// export const Large: Story = {
+//   args: {
+//     size: 'large',
+//     label: 'Button',
+//   },
+// }
+//
+// export const Small: Story = {
+//   args: {
+//     size: 'small',
+//     label: 'Button',
+//   },
+// }

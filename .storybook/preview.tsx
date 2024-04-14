@@ -7,7 +7,7 @@ import * as JaMsg from '../messages/ja.json'
 const preview: Preview = {
   globalTypes: {
     locale: {
-      description: 'Internationalization locale',
+      description: '국제화 locale',
       defaultValue: 'ko',
       toolbar: {
         icon: 'globe',
