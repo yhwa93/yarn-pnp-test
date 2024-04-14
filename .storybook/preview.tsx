@@ -1,8 +1,8 @@
 import type { Preview } from '@storybook/react'
 import { NextIntlClientProvider } from 'next-intl'
-import * as koMsg from '../messages/ko.json'
-import * as enMsg from '../messages/en.json'
-import * as jaMsg from '../messages/ja.json'
+import * as KoMsg from '../messages/ko.json'
+import * as EnMsg from '../messages/en.json'
+import * as JaMsg from '../messages/ja.json'
 
 const preview: Preview = {
   globalTypes: {
@@ -26,11 +26,11 @@ const preview: Preview = {
       const convertLocaleMsg = () => {
         switch (selectedLocale) {
           case 'ko':
-            return koMsg
+            return KoMsg
           case 'en':
-            return enMsg
+            return EnMsg
           case 'ja':
-            return jaMsg
+            return JaMsg
         }
       }
 
